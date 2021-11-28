@@ -47,6 +47,10 @@ print (Max_Price)
 mean_df = df['SALE_PRICE'].mean()
 print(mean_df)
 
+# No of properties sold in Cork 2010 to 2020
+#cork_sales = (df['County'='Cork'])
+#print(cork_sales)
+
 # 4 Define a custom function to create a reusabel code
 def say_hello(name):
     print("Hello " + name)
@@ -60,17 +64,19 @@ print(test)
 df4 = pd.date_range(start="2020-01-01",end="2020-12-31")
 print(df4)
 
-X = list(df4.iloc[:, 3])
-Y = list(df4.iloc[:, 4])
+# X = list(df4.iloc[:, 3])
+# Y = list(df4.iloc[:, 4])
 
 # Plot the data using bar() method
-plt.bar(X, Y, color='g')
-plt.title("County vs Price")
-plt.xlabel("County")
-plt.ylabel("Sale Price in Euros")
+# plt.bar(X, Y, color='g')
+# plt.title("County vs Price")
+#plt.xlabel("County")
+# plt.ylabel("Sale Price in Euros")
+
+# I couldnt figure out how to just select the Sale Date of 2020 vs the County
 
 # Show the plot
-plt.show()
+#plt.show()
 
 
 
