@@ -35,9 +35,38 @@ df1.iloc[0]
 # display VAT Excluded purchases for Cork
 # loc() is a label based data selecting and includes the last element of range passed to it
 df2=(df.loc[df.COUNTY == 'Cork'])
-df3 = (df2.loc[ df.IF_VAT_EXCLUDED==1])
+df3 = (df2.loc[ df.SALE_Price==()])
 print (df3)
 
+# highest price paid for a house in Ireland between 2010 and May 2021
+Max_Price = df.loc[:,'SALE_PRICE'].max()
+print (Max_Price)
+
+# average price of property
+mean_df = df['SALE_PRICE'].mean()
+print(mean_df)
+
+# 4 Define a custom function to create a reusabel code
+def say_hello(name):
+    print("Hello " + name)
+say_hello("Dominic")
+
+# numpy
+test = np.array([df])
+print(test)
+
+# 5 Visualise, create a bar graph of County vs Sale price
+X = list(df.iloc[:, 3])
+Y = list(df.iloc[:, 4])
+
+# Plot the data using bar() method
+plt.bar(X, Y, color='g')
+plt.title("County vs Price")
+plt.xlabel("County")
+plt.ylabel("Sale Price in Euros")
+
+# Show the plot
+plt.show()
 
 
 
